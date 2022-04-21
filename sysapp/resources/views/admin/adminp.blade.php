@@ -5,7 +5,7 @@
 @section('admincontenent')
     <div class="col-md-12">
 
-        <a href="{{route('slideview')}}">
+        <a href="#">
         <div class="col-md-4 col-sm-6 col-xs-6">
             <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-brown set-icon">
@@ -99,7 +99,7 @@
                     <i class="fa fa-rocket"></i>
                 </span>
                 <div class="text-box" >
-                    <p class="main-text">nbrsms</p>
+                    <p class="main-text">SMS</p>
                     <p class="text-muted">Contact</p>
                 </div>
             </div>

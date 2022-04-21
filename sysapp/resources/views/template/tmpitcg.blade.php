@@ -148,7 +148,7 @@
                                 <a href="https://www.instagram.com/itcgrouphaiti" class="fa fa-google-plus" target="blank"></a>
                             </li>
 
-                            <li><a href="{{route('adminpage')}}"><i class="fa fa-lock" style="color: goldenrod;font-size: 20px;"></i></a></li>
+                            <li><a href="{{route('loginpage')}}"><i class="fa fa-lock" style="color: goldenrod;font-size: 20px;"></i></a></li>
 
                         </ul>
                         <!--social-icons-->
