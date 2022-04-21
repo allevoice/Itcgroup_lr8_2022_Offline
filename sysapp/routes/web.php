@@ -56,16 +56,17 @@ Route::post('lang', function () {
 
 
 Route::get('/login',function(){
-    echo 'login page';
+    return view('home/login');
 })->name('loginpage');
+
+Route::get('/forgetpass',function(){
+    return view('home/passforget');
+})->name('forgetpass');
 
 
 //ADMIN PAGES
 Route::get('/admin','App\Http\Controllers\DashpageController@index')->name('adminpage');
 
 //Slide Shows
-Route::get('/slides','SlideshowController@index')->name('slideview');
-Route::get('/view/{id}','SlideshowController@show')->name('viewslideid');
-Route::get('/new','SlideshowController@create')->name('newslideform');
-Route::post('/insert','SlideshowController@store')->name('insertslideform');
+
 //Slide Shows
