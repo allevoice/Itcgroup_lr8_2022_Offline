@@ -19,46 +19,99 @@
 
 
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="col-md-7 hidden-sm hidden-xs">
+            <div class="col-md-10 col-md-offset-1" style="background-color:#5bc0de;">
 
-                @include('template.imglogin')
+                <div class="col-md-7 hidden-sm hidden-xs" style="margin-left: -2%">
 
-                </div>
-                <div class="col-md-5">
-                    <h1 class="text-center" style="color:black">Connexion </h1>
-                    <form class="form-horizontal" action="{{route('adminpage')}}">
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox"> Remember me
-                                    </label>
+
+                    <div id="carousel-example-generic" class="carousel slide colorback" data-ride="carousel" >
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+
+                            <div class="item active">
+                                <div  class="pull-right">
+                                    <img src="{{asset('assets/img/login/log_1.jpg')}}" class="img-thumbnail"/>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-info">Sign in</button>
 
-                                <a href="{{route('forgetpass')}}" class="text-center pull-right">I forgot my password</a>
+                            <div class="item">
+                                <div  class="pull-right">
+                                    <img src="{{asset('assets/img/login/log_2.jpg')}}"  class="img-thumbnail"/>
+                                </div>
                             </div>
 
-                        </div>
+                            <div class="item">
+                                <div  class="pull-right">
+                                    <img src="{{asset('assets/img/login/log_3.jpg')}}"  class="img-thumbnail"/>
+                                </div>
+                            </div>
 
-                    </form>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <div class="col-md-5" >
+
+                    <div class="col-md-12 hidden-xs" style="margin-top: 10%; height:20px; background-color: transparent;"></div>
+
+                    <div class="col-md-12" style="background-color:#ffffff">
+                        <h1 class="text-center" style="color:black">Connexion </h1>
+
+
+                        <form class="form-horizontal" action="{{route('adminpage')}}">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                                <div class="col-sm-7">
+                                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+                                <div class="col-sm-7">
+                                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Remember me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <button type="submit" class="btn btn-info">Sign in</button>
+
+                                    <a href="{{route('forgetpass')}}" class="text-center pull-right">I forgot my password</a>
+                                </div>
+
+                            </div>
+
+                        </form>
+
+
+
+                    </div>
+
+
+
+
+
                 </div>
             </div>
         </div>

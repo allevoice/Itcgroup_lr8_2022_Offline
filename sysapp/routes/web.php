@@ -66,7 +66,15 @@ Route::get('/forgetpass',function(){
 
 //ADMIN PAGES
 Route::get('/admin','App\Http\Controllers\DashpageController@index')->name('adminpage');
-
 //Slide Shows
 
+Route::resource('slide', 'App\Http\Controllers\SlideController')->names([
+    'index'=> 'listslide',
+    'show'=> 'viewslide',
+    'create'=> 'newslide',
+    'store',
+    'edit'=>'editslide',
+    'update',
+    'destroy'
+]);
 //Slide Shows

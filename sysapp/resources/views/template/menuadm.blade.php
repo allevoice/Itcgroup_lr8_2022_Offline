@@ -13,7 +13,10 @@
     <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+font-size: 16px;">
+        <a href="#" class="btn btn-danger square-btn-adjust">Logout</a>
+        <a href="#" class="btn btn-warning square-btn-adjust"><span class="fa fa-wrench"></span></a>
+    </div>
 </nav>
 <!-- /. NAV TOP  -->
 <nav class="navbar-default navbar-side" role="navigation">
@@ -21,6 +24,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
         <ul class="nav" id="main-menu">
             <li class="text-center">
                 <img src="{{asset('assets/assetsadm/img/profile/find_user.png')}}" class="user-image img-responsive"/>
+                <span style="margin-top: 0;color:#ffffff;">rjmk27@gmail.com</span>
             </li>
 
             <li>
@@ -32,7 +36,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                 <a href="#">Home<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#">Slide show</a>
+                        <a href="{{route('listslide')}}">Slide show</a>
                     </li>
                     <li>
                         <a href="#">Services offert</a>
@@ -135,7 +139,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                         <a href="#">Our comment</a>
                     </li>
                     <li>
-                        <a href="#">Cm sms</a>
+                        <a href="#">Contact Message</a>
                     </li>
                     <li>
                         <a href="#">Maps</a>
