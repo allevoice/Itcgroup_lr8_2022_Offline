@@ -1,0 +1,7 @@
+code important
+
+
+php artisan make:model -mcr NomModel
+
+
+php artisan make:factory PostFactory --model=Post

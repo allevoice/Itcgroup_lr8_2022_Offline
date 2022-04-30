@@ -24,9 +24,9 @@ Route::fallback(function (){
 });
 
 
-Route::get('/', function () {
-    return view('home/home');
-})->name('home');
+Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home');
+Route::get('/partner/', 'App\Http\Controllers\HomeController@parnerliste')->name('parnerliste');
+
 
 Route::get('/about', function () {
     return view('home/about');
@@ -78,3 +78,16 @@ Route::resource('slide', 'App\Http\Controllers\SlideController')->names([
     'destroy'
 ]);
 //Slide Shows
+
+
+//Partners
+Route::resource('partners', 'App\Http\Controllers\PartnerController')->names([
+    'index'=> 'listpartner',
+    'show'=> 'viewpartner',
+    'create'=> 'newpartner',
+    'store',
+    'edit'=>'editpartner',
+    'update',
+    'destroy'
+]);
+//Partners

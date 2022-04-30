@@ -341,114 +341,65 @@
 
 
 
+    @if (count($partner) > 0)
+        <!--=====================================-->
+        <!--============== Partners =============-->
+        <!--=====================================-->
+        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="container">
+                <div class="row">
+                    <aside class="paddingBox border-top col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="partner-heading col-lg-2 col-md-2 col-sm-12 col-xs-12">Our
+                            <br>
+                            <span class="light-font">Business</span>
+                            <br>
+                            Partners
+                            <!--partner-heading-->
+                        </div>
 
-    <!--=====================================-->
-    <!--============== Partners =============-->
-    <!--=====================================-->
-    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="container">
-            <div class="row">
-                <aside class="paddingBox border-top col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="partner-heading col-lg-2 col-md-2 col-sm-12 col-xs-12">Our
-                        <br>
-                        <span class="light-font">Business</span>
-                        <br>
-                        Partners
-                        <!--partner-heading-->
-                    </div>
-                    <div class="partners col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                        <div class="partners col-lg-10 col-md-12 col-sm-12 col-xs-12">
 
-                        <aside class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="partner-logos col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <span> <a href="#">
-                                        <img src="{{asset('assets/img/partners/partner-logo1.png')}}" alt="" />
+
+
+                            @foreach ($partner as $partnerlst)
+                                <aside class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="partner-logos col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <span> <a href="https://{{$partnerlst->linkpartner}}" title="{{$partnerlst->titlepartner}}" target="_blank">
+                                        <img src="{{asset('assets/img/partners/')}}/{{$partnerlst->imgpartner}}" alt="" />
                                     </a> </span>
-                                <!--partner-logos-->
-                            </div>
-                            <!--col-lg-3-->
-                        </aside>
+                                        <!--partner-logos-->
+                                    </div>
+                                    <!--col-lg-3-->
+                                </aside>
+                            @endforeach
 
 
-                        <aside class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="partner-logos col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <span> <a href="#">
-                                        <img src="{{asset('assets/img/partners/partner-logo2.png')}}" alt="" />
-                                    </a> </span>
-                                <!--partner-logos-->
-                            </div>
-                            <!--col-lg-3-->
-                        </aside>
 
-
-                        <aside class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="partner-logos col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <span> <a href="#">
-                                        <img src="{{asset('assets/img/partners/partner-logo3.png')}}" alt="" />
-                                    </a> </span>
-                                <!--partner-logos-->
-                            </div>
-                            <!--col-lg-3-->
-                        </aside>
-
-
-                        <aside class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                            <div class="partner-logos col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <span> <a href="#">
-                                        <img src="{{asset('assets/img/partners/partner-logo4.png')}}" alt="" />
-                                    </a> </span>
-                                <!--partner-logos-->
-                            </div>
-                            <!--col-lg-3-->
-                        </aside>
-                        <aside class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="partner-logos col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <span> <a href="#">
-                                        <img src="{{asset('assets/img/partners/partner-logo5.png')}}" alt="" />
-                                    </a> </span>
-                                <!--partner-logos-->
-                            </div>
-                            <!--col-lg-3-->
-                        </aside>
-
-                        <aside class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="partner-logos col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <span> <a href="#">
-                                        <img src="{{asset('assets/img/partners/partner-logo6.png')}}" alt="" />
-                                    </a> </span>
-                                <!--partner-logos-->
-                            </div>
-                            <!--col-lg-3-->
-                        </aside>
-
-                        <aside class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="partner-logos col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <span> <a href="#">
-                                        <img src="{{asset('assets/img/partners/partner-logo7.png')}}" alt="" />
-                                    </a> </span>
-                                <!--partner-logos-->
-                            </div>
-                            <!--col-lg-3-->
-                        </aside>
-                        <aside class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="partner-logos col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <span> <a href="#">
-                                        <img src="{{asset('assets/img/partners/partner-logo8.jpg')}}" alt="" />
-                                    </a> </span>
-                                <!--partner-logos-->
-                            </div>
-                            <!--col-lg-3-->
-                        </aside>
-                        <!--partners-->
-                    </div>
+                            <!--partners-->
+                        </div>
+                            <a href="{{route('parnerliste')}}" class="btn btn-sm btn-primary">More Partners</a>
                     <!--paddingBox-->
-                </aside>
-                <!--row-->
+                    </aside>
+                    <!--row-->
+                </div>
+                <!--container-->
             </div>
-            <!--container-->
+            <!--col-lg-12-->
         </div>
-        <!--col-lg-12-->
-    </div>
-    <!--main-contentbox-->
+        <!--main-contentbox-->
+
+    @endif
+
+
+
+
+
+
+
+
+
+
+
     </div>
 
 @endsection

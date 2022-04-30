@@ -57,7 +57,7 @@ font-size: 16px;">
                     </li>
 
                     <li>
-                        <a href="#">Patners</a>
+                        <a href="{{route('listpartner')}}">Patners</a>
                     </li>
                 </ul>
             </li>
