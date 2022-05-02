@@ -15,11 +15,11 @@
 
     <div class="sub-banner-con darkBlueBg col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="row">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="sub-banner-text darkBlueBg regular-font col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <div>
-                            <h1>Our <span class="light-font"> Business</span> Partners</h1>
+                    <div class="sub-banner-text darkBlueBg regular-font col-lg-6 col-md-5 col-sm-12 col-xs-12" >
+                        <div style="padding-left:10%;">
+                        <h1>Our <span class="light-font"> Business</span> Partners</h1>
                         </div>
                         <!--sub-banner-text-->
                     </div>
@@ -27,8 +27,8 @@
                 </div>
                 <!--container-->
             </div>
-            <div class="sub-banner-img subbannerabout col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <img src="{{asset('assets/img/banners/about-banner.jpg')}}">
+            <div class="sub-banner-img col-lg-6 col-md-7 col-sm-12 col-xs-12">
+                @include('template.bannerpage')
             </div>
             <!--row-->
         </div>
@@ -68,7 +68,15 @@
                                         <div class="service-innerbox greyBg">
                                             <a href="https://{{$partnerlst->linkpartner}}" target="_blank">
                                                 <div class="icon-holder darkBlueBg" data-effect="helix">
-                                                    <span><img src="{{asset('assets/img/partners')}}/{{$partnerlst->imgpartner}}" alt="invest-img2" /></span>
+                                                    <style>
+                                                        .monimgback{
+                                                            -webkit-filter: drop-shadow(1px 1px 0 #ffffff)
+                                                            drop-shadow(-1px -1px 0 #ffffff);
+                                                            filter: drop-shadow(1px 1px 0 #ffffff)
+                                                            drop-shadow(-1px -1px 0 #ffffff);
+                                                        }
+                                                    </style>
+                                                    <span><img src="{{asset('assets/img/partners')}}/{{$partnerlst->imgpartner}}" alt="invest-img2" class="monimgback"/></span>
                                                 </div>
                                             </a>
                                             <h4 style="font-size:90%">{{$partnerlst->titlepartner}}</h4>

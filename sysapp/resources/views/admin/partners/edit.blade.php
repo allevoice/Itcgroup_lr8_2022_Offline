@@ -1,12 +1,12 @@
 @extends('template.thermadmin')
 
-@section('title', 'Home')
+@section('title', 'Partner')
 
 @section('admincontenent')
     <div class="col-md-12">
         <h2>
-            Editer {{$data->titleslide}}
-            <a href="{{route('listslide')}}" class="btn btn-md btn-primary"><i class="glyphicon glyphicon-arrow-left"></i></a>
+            Editer {{$data->titlepartner}}
+            <a href="#" class="btn btn-md btn-primary"><i class="glyphicon glyphicon-arrow-left"></i></a>
         </h2>
 
         <form method="post" action="#" enctype="multipart/form-data">
@@ -16,7 +16,7 @@
                 <div class="col-sm-6 @error('slide') is-invalid @enderror">
                     <input class="form-control col-sm-6" type="file" name="slide">
                     <span id="helpBlock" class="help-block">
-                        <strong>Slide</strong>
+                        <strong>Background image</strong>
                         Accept les format suivant PNG, JPG, JPEG...
                     </span>
                    @error('slide')
@@ -91,7 +91,7 @@
                             <div class="col-md-6">
                                 <label>
                                     <span>Langues</span>
-                                    <span class="btn-info"> en</span>
+                                    <span class="btn-info"> {{}}</span>
                                 </label>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
             <div class="form-group col-md-12">
                 <div class="col-md-6 center">
                     <label>
-                        <a href="{{route('listslide')}}" class="btn btn-danger" type="button">Retour</a>
+                        <a href="#" class="btn btn-danger" type="button">Retour</a>
                     </label>
                 </div>
                 <div class="col-md-6">

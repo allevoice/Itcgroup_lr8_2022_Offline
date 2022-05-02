@@ -13,54 +13,11 @@
 
 
     <div class="main-contentbox">
-
-
-
-
-
-        <div class="row">
             <div class="col-md-10 col-md-offset-1" style="background-color:#5bc0de;">
 
                 <div class="col-md-7 hidden-sm hidden-xs" style="margin-left: -2%">
-
-
-                    <div id="carousel-example-generic" class="carousel slide colorback" data-ride="carousel" >
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
-
-                            <div class="item active">
-                                <div  class="pull-right">
-                                    <img src="{{asset('assets/img/login/log_1.jpg')}}" class="img-thumbnail"/>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div  class="pull-right">
-                                    <img src="{{asset('assets/img/login/log_2.jpg')}}"  class="img-thumbnail"/>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div  class="pull-right">
-                                    <img src="{{asset('assets/img/login/log_3.jpg')}}"  class="img-thumbnail"/>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-
-
-
-
-
+                    @include('template.imglogin')
                 </div>
-
-
-
-
-
 
 
                 <div class="col-md-5" >
@@ -114,11 +71,6 @@
 
                 </div>
             </div>
-        </div>
-
-
-
-
         <!--main-contentbox-->
     </div>
 

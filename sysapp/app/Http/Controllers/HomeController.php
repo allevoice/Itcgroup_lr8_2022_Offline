@@ -12,6 +12,7 @@ class HomeController extends Controller
         //dd($partner);
         return view('home/home',compact('partner'));
     }
+
     public function parnerliste(){
         $partner = $this->partnerlistedata();
         return view('home/partnerlist',compact('partner'));

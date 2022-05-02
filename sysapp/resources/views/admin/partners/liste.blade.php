@@ -65,7 +65,7 @@
                                     {{$show->id}}
 
                                     <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal_view_{{$show->id}}"><i class="glyphicon glyphicon-eye-open"></i></a>
-                                    <a href="#" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-pencil"></i></a>
+                                    <a href="{{route('editpartner',$show->id)}}" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-pencil"></i></a>
                                     <a href="#" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
                                 </td>
                             </tr>

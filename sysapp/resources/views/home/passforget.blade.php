@@ -13,20 +13,18 @@
 
 
     <div class="main-contentbox">
+        <div class="col-md-10 col-md-offset-1" style="background-color:#5bc0de;">
+            <div class="col-md-7 hidden-sm hidden-xs" style="margin-left: -2%">
+                @include('template.imglogin')
+            </div>
 
 
+            <div class="col-md-5" >
 
+                <div class="col-md-12 hidden-xs" style="margin-top: 10%; height:20px; background-color: transparent;"></div>
 
-
-
-
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="col-md-7 hidden-sm hidden-xs">
-                    @include('template.imglogin')
-                </div>
-                <div class="col-md-5">
-                    <h1 class="h1">Probleme Mot de Passe</h1>
+                <div class="col-md-12" style="background-color:#ffffff">
+                    <h2 class="h2 text-center" style="color:black">Probleme Mot de Passe</h2>
                     <form class="form-horizontal" action="{{route('adminpage')}}">
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
@@ -44,21 +42,10 @@
                         </div>
 
                     </form>
+
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     </div>

@@ -17,14 +17,12 @@
         <!--=====================================-->
         <!--============== Banner ===============-->
         <!--=====================================-->
-
-
         <div class="sub-banner-con darkBlueBg col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="row">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
-                        <div class="sub-banner-text darkBlueBg regular-font col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <div>
+                        <div class="sub-banner-text darkBlueBg regular-font col-lg-6 col-md-5 col-sm-12 col-xs-12" >
+                            <div style="padding-left:10%;">
                                 <h1>about us</h1>
                                 <p>We are 100% dedicated to customer satisfaction and relationship built on trust</p>
                             </div>
@@ -34,15 +32,13 @@
                     </div>
                     <!--container-->
                 </div>
-                <div class="sub-banner-img subbannerabout col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <img src="{{asset('assets/img/banners/about-banner.jpg')}}">
+                <div class="sub-banner-img col-lg-6 col-md-7 col-sm-12 col-xs-12">
+                    @include('template.bannerpage')
                 </div>
                 <!--row-->
             </div>
             <!--col-lg-12-->
         </div>
-
-
 
 
 
@@ -89,11 +85,13 @@
         <!--=====================================-->
         <!--============ Who We Are =============-->
         <!--=====================================-->
+
+
         <div class="pattern col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:#000000;">
             <div class="container">
                 <div class="row">
                     <div class="who-we-are pull-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <div>
+                        <div style="padding-left:10%;">
                             <h2>ABOUT THE FOUNDER</h2>
                             <p>Jean Samuel Jules (CEO)</p>
                             <div class="transparent-btn pull-left">
@@ -108,6 +106,10 @@
             <div class="who-we-are-img"><img src="{{asset('assets/img/logo/who-we-are-img.png')}}" alt="who-we-are-img" /></div>
             <!--pattern-->
         </div>
+
+
+
+
         <!--=====================================-->
         <!--========= Meet our Advisors =========-->
         <!--=====================================-->
@@ -117,10 +119,15 @@
                     <h2>Meet Our Advisors</h2>
                     <p class="regular-font">Our team is made up of people passionate about technology and business management. Indeed, a wide range of skills and expertise is needed to provide the best solution to our clients in all areas of Information Technology and consulting.</p>
                     <div class="spacer"></div>
+
+
+
+
+
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <aside class="advisor-box col-lg-12 col-md-12 col-sm-12 col-xs-12 active">
                             <figure class="advisor-img1"><img alt="advisor-img1" src="{{asset('assets/img/services/advisor-img1.png')}}"></figure>
-                            <div class="advisor-info text-right">
+                            <div class="advisor-info text-right" style="width:140px; margin-right: -15px">
                                 <h3>Jean<br>Samuel<br>Jules<span><hr>Chief Advisor<br>CEO</span></h3>
                             </div>
                             <div class="social-icons">
@@ -137,7 +144,7 @@
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <aside class="advisor-box col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <figure class="advisor-img2"><img alt="advisor-img2" src="{{asset('assets/img/services/advisor-img1.png')}}"></figure>
-                            <div class="advisor-info text-right">
+                            <div class="advisor-info text-right" style="width:140px; margin-right: -15px">
                                 <h3>Valerie<span><hr>Chief Advisor</span></h3>
                                 <!--
                                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -159,7 +166,7 @@
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <aside class="advisor-box col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <figure class="advisor-img3"><img alt="advisor-img3" src="{{asset('assets/img/services/advisor-img1.png')}}"></figure>
-                            <div class="advisor-info text-right">
+                            <div class="advisor-info text-right" style="width:140px; margin-right: -15px">
                                 <h3>Cassy <span><hr>Chief Advisor</span></h3>
                                 <!--
                                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -181,7 +188,7 @@
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <aside class="advisor-box col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <figure class="advisor-img4"><img alt="advisor-img4" src="{{asset('assets/img/services/advisor-img1.png')}}"></figure>
-                            <div class="advisor-info text-right">
+                            <div class="advisor-info text-right" style="width:140px; margin-right: -15px">
                                 <h3>NewOne <span><hr>Chief Advisor</span></h3>
                                 <!--
                                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

@@ -59,7 +59,8 @@ class PartnerController extends Controller
      */
     public function edit(Partner $partner)
     {
-        //
+        $data=$partner;
+        return view('admin/partners/edit',compact('data'));
     }
 
     /**

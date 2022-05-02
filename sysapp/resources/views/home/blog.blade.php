@@ -18,12 +18,13 @@
         <!--============== Banner ===============-->
         <!--=====================================-->
 
+
         <div class="sub-banner-con darkBlueBg col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="row">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
-                        <div class="sub-banner-text darkBlueBg regular-font col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <div>
+                        <div class="sub-banner-text darkBlueBg regular-font col-lg-6 col-md-5 col-sm-12 col-xs-12" >
+                            <div style="padding-left:10%;">
                                 <h1>blog</h1>
                                 <p>Meet the CEO : Jean Samuel Jules</p>
                             </div>
@@ -33,13 +34,15 @@
                     </div>
                     <!--container-->
                 </div>
-                <div class="sub-banner-img subbannerabout col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <img src="{{asset('assets/img/banners/about-banner.jpg')}}">
+                <div class="sub-banner-img col-lg-6 col-md-7 col-sm-12 col-xs-12">
+                    @include('template.bannerpage')
                 </div>
                 <!--row-->
             </div>
             <!--col-lg-12-->
         </div>
+
+
 
 
         <!--===================================-->
