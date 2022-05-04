@@ -14,11 +14,9 @@
 
         <a href="{{route('home')}}" class="btn btn-lg btn-info center">Retour</a>
 
-
-        <p>
-            Erreur se produis lors de la demande de votre pages...Veuiller reeseyz
-
-        </p>
+        <span>
+            Une Erreur se produit lors de la demande de votre page...Veuillez réessayer
+        </span>
     </div>
 
 @endsection

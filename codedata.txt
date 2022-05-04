@@ -5,3 +5,12 @@ php artisan make:model -mcr NomModel
 
 
 php artisan make:factory PostFactory --model=Post
+
+
+
+DB_CONNECTION=mysql
+DB_HOST=50.31.138.79
+DB_PORT=3306
+DB_DATABASE=ntpsams2_itcgroupelive
+DB_USERNAME=ntpsams2_itcgrp
+DB_PASSWORD=KQNX2ur$mORG

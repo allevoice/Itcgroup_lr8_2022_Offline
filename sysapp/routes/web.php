@@ -87,7 +87,7 @@ Route::resource('partners', 'App\Http\Controllers\PartnerController')->names([
     'create'=> 'newpartner',
     'store',
     'edit'=>'editpartner',
-    'update',
+    'update' =>'addupdpartner',
     'destroy'
 ]);
 //Partners

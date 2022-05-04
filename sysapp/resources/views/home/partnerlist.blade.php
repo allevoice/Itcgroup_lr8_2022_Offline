@@ -43,9 +43,11 @@
         <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="container">
                 <div class="row darkBlueBg">
-                    <div class=" text-center" style="height:auto;padding-top: 2%;padding-bottom: 2%;">
-                        {{ $partner->links('pagination::bootstrap-4') }}
-                    </div>
+
+                        <div class=" text-center" style="height:auto;padding-top: 2%;padding-bottom: 2%;">
+                            {{ $partner->links('pagination::bootstrap-4') }}
+                        </div>
+
 
 
                     <!--================================================-->
@@ -60,9 +62,9 @@
                                     <aside class="services-plans col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                         <figure>
                                             @if ($partnerlst->backimgpartner !=Null)
-                                                <img src="{{asset('assets/img/partners/')}}/{{$partnerlst->backimgpartner}}" alt="" />
+                                                <img src="{{asset('assets/img/partners/')}}/{{$partnerlst->backimgpartner}}" alt="" height="200"/>
                                             @else
-                                                <img src="{{asset('assets/img/partners/services-img1.jpg')}}" alt="" />
+                                                <img src="{{asset('assets/img/partners/services-img1.jpg')}}" alt="" height="200"/>
                                             @endif
                                         </figure>
                                         <div class="service-innerbox greyBg">
@@ -99,9 +101,13 @@
 
                     <div class="spacer"></div>
 
-                    <div class="darkBlueBg text-center" style="height:padding-bottom: 2%;">
-                        {{ $partner->links('pagination::bootstrap-4') }}
-                    </div>
+
+
+                        <div class="darkBlueBg text-center" style="height:padding-bottom: 2%;">
+                            {{ $partner->links('pagination::bootstrap-4') }}
+                        </div>
+
+
                 </div>
 
                 <!--container-->
