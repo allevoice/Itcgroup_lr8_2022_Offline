@@ -341,6 +341,8 @@
 
 
 
+
+
     @if (count($partner) > 0)
         <!--=====================================-->
         <!--============== Partners =============-->
@@ -364,8 +366,8 @@
                             @foreach ($partner as $partnerlst)
                                 <aside class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                     <div class="partner-logos col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <span> <a href="https://{{$partnerlst->linkpartner}}" title="{{$partnerlst->titlepartner}}" target="_blank">
-                                        <img src="{{asset('assets/img/partners/')}}/{{$partnerlst->imgpartner}}" alt="" />
+                                <span> <a href="{{$partnerlst->linkpartner}}" title="{{$partnerlst->titlepartner}}" target="_blank">
+                                        <img src="{{asset('assets/img/partners/')}}/{{$partnerlst->imgpartner}}" alt="" width="100%"/>
                                     </a> </span>
                                         <!--partner-logos-->
                                     </div>

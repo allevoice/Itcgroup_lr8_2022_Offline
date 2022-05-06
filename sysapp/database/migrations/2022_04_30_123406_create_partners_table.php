@@ -20,7 +20,7 @@ class CreatePartnersTable extends Migration
             $table->string('linkpartner')->nullable();
             $table->text('backimgpartner')->nullable();
             $table->text('imgpartner')->nullable();
-            $table->integer('status')->nullable();
+            $table->string('status')->nullable();
             $table->string('langues')->nullable();
             $table->string('level')->nullable();
             $table->string('iduser')->nullable();

@@ -12,4 +12,7 @@ class Partner extends Model
 
     protected $guarded = [];
     use SoftDeletes;
+
+
+
 }

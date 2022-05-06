@@ -17,8 +17,8 @@
         <div class="row">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="sub-banner-text darkBlueBg regular-font col-lg-6 col-md-5 col-sm-12 col-xs-12" >
-                        <div style="padding-left:10%;">
+                    <div class="sub-banner-text darkBlueBg regular-font col-lg-5 col-md-5 col-sm-12 col-xs-12" >
+                        <div style="padding-left:10%;margin-left: -2%">
                         <h1>Our <span class="light-font"> Business</span> Partners</h1>
                         </div>
                         <!--sub-banner-text-->
@@ -27,7 +27,7 @@
                 </div>
                 <!--container-->
             </div>
-            <div class="sub-banner-img col-lg-6 col-md-7 col-sm-12 col-xs-12">
+            <div class="sub-banner-img col-lg-7 col-md-7 col-sm-12 col-xs-12">
                 @include('template.bannerpage')
             </div>
             <!--row-->
@@ -76,6 +76,7 @@
                                                             drop-shadow(-1px -1px 0 #ffffff);
                                                             filter: drop-shadow(1px 1px 0 #ffffff)
                                                             drop-shadow(-1px -1px 0 #ffffff);
+                                                            width:100%;
                                                         }
                                                     </style>
                                                     <span><img src="{{asset('assets/img/partners')}}/{{$partnerlst->imgpartner}}" alt="invest-img2" class="monimgback"/></span>

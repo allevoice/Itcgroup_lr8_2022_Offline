@@ -83,11 +83,28 @@ Route::resource('slide', 'App\Http\Controllers\SlideController')->names([
 //Partners
 Route::resource('partners', 'App\Http\Controllers\PartnerController')->names([
     'index'=> 'listpartner',
-    'show'=> 'viewpartner',
+    'show',
     'create'=> 'newpartner',
-    'store',
+    'store'=>'insertpartner',
     'edit'=>'editpartner',
     'update' =>'addupdpartner',
+    'destroy'=>'delpartner'
+]);
+Route::get('/delpartener','App\Http\Controllers\PartnerController@sofderestore')->name('listedelpartener');
+Route::get('/restoredestroy/{id}','App\Http\Controllers\PartnerController@restoredestroy')->name('restoredelepartener');
+Route::delete('/destoredefinitely/{id}','App\Http\Controllers\PartnerController@destoredefinitely')->name('deletecompletepartener');
+//fin les routes de categorie
+//Partners
+
+
+//Status
+Route::resource('status', 'App\Http\Controllers\StatusController')->names([
+    'index'=> 'liststatus',
+    'show',
+    'create',
+    'store',
+    'edit',
+    'update',
     'destroy'
 ]);
-//Partners
+//Status

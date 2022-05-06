@@ -5,9 +5,8 @@
 @section('admincontenent')
     <div class="col-md-12">
         <h2>
-            Partners Shows liste
-            <a href="{{route('newpartner')}}" class="btn btn-sm btn-primary">+</a>
-            <a href="{{route('listedelpartener')}}" class="btn btn-xs btn-danger">Del</a>
+            Partners Delete liste
+            <a href="{{route('listpartner')}}" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-arrow-left"></i></a>
         </h2>
 
 
@@ -21,8 +20,8 @@
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
                         <tr>
-                            <th >Image</th>
-                            <th >Logo</th>
+                            <th>Image</th>
+                            <th>Logo</th>
                             <th>Titre</th>
                             <th class="row visible-lg">Service</th>
                             <th class="row visible-lg">Link</th>
@@ -41,7 +40,7 @@
                             @endif
                                 ">
 
-                                <td class="center"  width="120">
+                                <td class="center" width="120">
                                     @if ($show->backimgpartner == NULL)
                                         <img src="{{asset('assets/img/partners/services-img1.jpg')}}" class="img-thumbnail" style="width:80">
                                     @else
@@ -50,7 +49,7 @@
                                 </td>
 
                                 <td class="center">
-                                        <img src="{{asset('assets/img/partners/')}}/{{$show->imgpartner}}" class="img-circle" width="200">
+                                        <img src="{{asset('assets/img/partners/')}}/{{$show->imgpartner}}" class="img-circle">
                                 </td>
 
                                 <td>{{$show->titlepartner}}</td>
@@ -63,17 +62,17 @@
                                 <td class="row visible-lg">{{levelcmd($show->level)}}</td>
 
                                 <td>
-                                    <form action="{{route('delpartner',$show->id)}}" method="post" class='form-inline'>
+                                    <form action="{{route('deletecompletepartener',$show->id)}}" method="post" class='form-inline'>
                                         @csrf
                                         @method('DELETE')
 
                                         <a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#myModal_view_{{$show->id}}"><i class="glyphicon glyphicon-eye-open"></i></a>
-                                        <a href="{{route('editpartner',$show->id)}}" class="btn btn-xs btn-info"><i class="glyphicon glyphicon-pencil"></i></a>
+                                        <a href="{{route('restoredelepartener',$show->id)}}" class="btn btn-xs btn-warning"><i class="glyphicon glyphicon-transfer"></i></a>
 
                                         <script>
                                             function ConfirmDeletebutton()
                                             {
-                                                return confirm("Are you sure you want to delete?");
+                                                return confirm("Are you sure you want to delete this Element definitly?");
                                             }
                                         </script>
                                         <button Onclick="return ConfirmDeletebutton();" type="submit" name="actiondelete" class=" form-group btn btn-danger btn-xs">

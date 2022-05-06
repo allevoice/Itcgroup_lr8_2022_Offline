@@ -147,6 +147,24 @@ font-size: 16px;">
                    </ul>
             </li>
 
+            <li>
+                <a href="#">Setting<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="{{route('liststatus')}}">Status</a>
+                    </li>
+                    <li>
+                        <a href="#">Our comment</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Message</a>
+                    </li>
+                    <li>
+                        <a href="#">Maps</a>
+                    </li>
+                   </ul>
+            </li>
+
 
 
 

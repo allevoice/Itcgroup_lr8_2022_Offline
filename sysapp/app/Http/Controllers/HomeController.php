@@ -21,12 +21,13 @@ class HomeController extends Controller
 
 
     public function partner(){
-        $viewpartner = Partner::where('status','1')->orderBy('level', 'desc')->limit(8)->get();
+        $viewpartner = Partner::where('status','1')->orderBy('level', 'ASC')->limit(8)->get();
         return $viewpartner;
     }
 
     public function partnerlistedata(){
-        $partnerlst = Partner::where('status','1')->orderBy('level', 'desc')->paginate(8);
+        $partnerlst = Partner::where('status','1')->orderBy('level', 'ASC')->paginate(8);
+        //dd($partnerlst);
         return $partnerlst;
     }
 

@@ -1,122 +1,97 @@
 @extends('template.thermadmin')
 
-@section('title', 'Home')
+@section('title', 'Partner')
 
 @section('admincontenent')
     <div class="col-md-12">
         <h2>
-            Nouveau SlideShows
-            <a href="{{route('listslide')}}" class="btn btn-md btn-primary"><i class="glyphicon glyphicon-arrow-left"></i></a>
+            New Insert
+            <a href="{{route('listpartner')}}" class="btn btn-md btn-primary"><i class="glyphicon glyphicon-arrow-left"></i></a>
         </h2>
 
-        <form method="post" action="#" enctype="multipart/form-data">
-        @csrf
-
-            <div class="form-group">
-                <div class="col-sm-6 @error('slide') is-invalid @enderror">
-                    <input class="form-control col-sm-6" type="file" name="slide">
-                    <span id="helpBlock" class="help-block"><strong>Slide</strong>   Accept les format suivant PNG, JPG, JPEG...</span>
-                   @error('slide')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-
-                <div class="col-sm-6 @error('logo') is-invalid @enderror">
-                    <input class="form-control col-sm-6" type="file" name="logo">                    
-                    <span id="helpBlock" class="help-block"><strong>Logo</strong> Accept les format suivant PNG, JPG</span>
-                    @error('logo')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-            </div>
-        
 
 
 
-        <div class="form-horizontal col-sm-12">
+            <div class="col-md-6 col-sm-8">
 
-            <div class="form-group @error('titlev') is-invalid @enderror">
-                <label for="inputEmail3" class="col-sm-2 control-label">Titre</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" name="titlev" value="{{old('titlev')}}" placeholder="Titre De l'info bulble">
-                    @error('titlev')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-            </div>
-
-
-            <div class="form-group @error('descdetail') is-invalid @enderror">
-                <label for="inputEmail3" class="col-sm-2 control-label">Contenue</label>
-                <div class="col-sm-10">
-                    <textarea class="form-control"  rows="3" name="descdetail" placeholder="Votre contenu" >{{old('descdetail')}}</textarea>
-                    @error('descdetail')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-            </div>
-
-            <div class="form-group @error('linkv') is-invalid @enderror">
-                <label for="inputEmail3" class="col-sm-2 control-label">link</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control"  name="linkv" value="{{old('linkv')}}" placeholder="url du site">
-                    @error('linkv')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-            </div>
+                <form method="post" action="{{route('insertpartner')}}">
+                    @csrf
+                    <div class="form-horizontal col-sm-12">
+                        <div class="form-group @error('titlev') is-invalid @enderror">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Titre</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="titlepartner" value="{{old('titlepartner')}}" placeholder="Titre De l'info bulble">
+                                @error('titlepartner')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
 
 
-            <div class="form-group @error('linkv') is-invalid @enderror">
-                <label for="inputEmail3" class="col-sm-2 control-label"></label>
-                <div class="col-sm-10">
-                    <div class="form-inline">
-                        <div class="form-group col-md-12">
+                        <div class="form-group @error('descdetail') is-invalid @enderror">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Contenue</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control"  rows="3" name="servicepartner" placeholder="Votre contenu" >{{old('servicepartner')}}</textarea>
+                                {{--@error('descdetail')--}}
+                                {{--<div class="alert alert-danger">{{ $message }}</div>--}}
+                                {{--@enderror--}}
+                            </div>
+                        </div>
 
-                            <div class="col-md-6">
+                        <div class="form-group @error('linkv') is-invalid @enderror">
+                            <label for="inputEmail3" class="col-sm-3 control-label">link</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  name="linkpartner" value="{{old('linkpartner')}}" placeholder="url du site">
+                                @error('linkpartner')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group @error('linkv') is-invalid @enderror">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Level</label>
+                            <div class="col-sm-9">
                                 <label>
-                                    <span>Statut</span>
-                                    <select class="form-control" name="stv">
-                                        <option value="1">Active</option>
-                                        <option value="" selected>Desactive</option>
+                                    <select class="form-control" name="level">
+                                        @foreach (levelcmd() as $key=>$liste)
+                                            {{--<option value="{{$key}}" selected='selected'>{{$liste}}</option>--}}
+                                            <option value="{{$key}}" {{ $key==old('level') ? "selected" : "" }} >{{$liste}}</option>
+                                        @endforeach
                                     </select>
                                 </label>
                             </div>
-                            <div class="col-md-6">
+                        </div>
+
+                        <div class="form-group @error('linkv') is-invalid @enderror">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Langues</label>
+                            <div class="col-sm-9">
                                 <label>
-                                    <span>Langues</span>
-                                    <span class="btn-info"> en</span>
+                                    <span class="btn-info">en</span>
                                 </label>
                             </div>
                         </div>
+
+                        <div class="form-group text-center">
+                            <div class="col-xs-6">
+                                <a href="{{route('listpartner')}}" class="btn btn-danger" type="button">Retour</a>
+                            </div>
+                            <div class="col-xs-6">
+                                <label>
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </label>
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-            </div>
 
+                </form>
 
-
-
-        </div>
-
-
-            <div class="form">
-            <div class="form-group col-md-12">
-                <div class="col-md-6 center">
-                    <label>
-                        <a href="{{route('listslide')}}" class="btn btn-danger" type="button">Retour</a>
-                    </label>
-                </div>
-                <div class="col-md-6">
-                <label>
-                        <input class="form-control btn-primary" type="submit" name="send" value="Ajout">
-                    </label>
-                </div>
 
             </div>
-        </div>
-
-        </form>
     </div>
+
+
+
 
 
 
