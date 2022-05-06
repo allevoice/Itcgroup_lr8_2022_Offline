@@ -8,27 +8,19 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        $partner = $this->partner();
+        $partner = Partner::where('status','1')->orderBy('level', 'ASC')->limit(8)->get();
         //dd($partner);
         return view('home/home',compact('partner'));
     }
 
     public function parnerliste(){
-        $partner = $this->partnerlistedata();
+        $partner = Partner::where('status','1')->orderBy('level', 'ASC')->paginate(8);
         return view('home/partnerlist',compact('partner'));
     }
 
 
+    public function partnercount(){
 
-    public function partner(){
-        $viewpartner = Partner::where('status','1')->orderBy('level', 'ASC')->limit(8)->get();
-        return $viewpartner;
-    }
-
-    public function partnerlistedata(){
-        $partnerlst = Partner::where('status','1')->orderBy('level', 'ASC')->paginate(8);
-        //dd($partnerlst);
-        return $partnerlst;
     }
 
 

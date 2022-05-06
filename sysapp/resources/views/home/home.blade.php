@@ -292,45 +292,63 @@
     <div class="paddingBox col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="container">
             <div class="row">
+
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <aside class="skill-level col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="numeric logo-background stat-count pull-left bold-font">8</div>
-                        <h4 class="black-color pull-left"><span>Years of <br>
-                            Experiences</span></h4>
+
+                        <div class="col-lg-4 col-md-12 col-sm-12 stat-count text-center bold-font">8</div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+                            <h4 class="black-color"><span >Years of Experiences</span></h4>
+                        </div>
                         <!--skill-level-->
                     </aside>
                     <!--col-lg-3-->
                 </div>
+
+
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <aside class="skill-level col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="numeric stat-count logo-background pull-left bold-font">90</div>
-                        <h4 class="black-color pull-left"><span>Happy<br>
-                            Customers</span></h4>
+
+                        <div class="col-lg-4 col-md-12 col-sm-12 stat-count text-center bold-font">90</div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+                            <h4 class="black-color"><span >Happy Customers</span></h4>
+                        </div>
                         <!--skill-level-->
                     </aside>
                     <!--col-lg-3-->
                 </div>
+
+
+
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <aside class="skill-level col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="numeric stat-count logo-background pull-left bold-font">9</div>
-                        <h4 class="black-color pull-left"><span>customers<br>
-                            every years</span></h4>
+                        <div class="col-lg-4 col-md-12 col-sm-12 stat-count text-center bold-font">9</div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+                            <h4 class="black-color"><span >customers every years</span></h4>
+                        </div>
                         <!--skill-level-->
                     </aside>
                     <!--col-lg-3-->
                 </div>
+
+
+
+
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <aside class="skill-level col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="numeric stat-count logo-background pull-left bold-font">12</div>
-                        <h4 class="black-color pull-left"><span>affiliate<br>
-                            Partnership</span></h4>
+                        <div class="col-lg-4 col-md-12 col-sm-12 stat-count text-center bold-font">{{count($partner)}}</div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+                            <h4 class="black-color"><span >affiliate Partnership</span></h4>
+                        </div>
                         <!--skill-level-->
                     </aside>
                     <!--col-lg-3-->
                 </div>
-                <!--row-->
-            </div>
-            <!--container-->
+
+
+
+
+
         </div>
         <!--paddingBox-->
     </div>
@@ -351,7 +369,7 @@
             <div class="container">
                 <div class="row">
                     <aside class="paddingBox border-top col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="partner-heading col-lg-2 col-md-2 col-sm-12 col-xs-12">Our
+                        <div class="partner-heading col-lg-2 col-md-3 col-sm-12 col-xs-12">Our
                             <br>
                             <span class="light-font">Business</span>
                             <br>
@@ -359,16 +377,18 @@
                             <!--partner-heading-->
                         </div>
 
-                        <div class="partners col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                        <div class="partners col-lg-10 col-md-9 col-sm-12 col-xs-12">
 
 
 
                             @foreach ($partner as $partnerlst)
-                                <aside class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                                     <div class="partner-logos col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <span> <a href="{{$partnerlst->linkpartner}}" title="{{$partnerlst->titlepartner}}" target="_blank">
-                                        <img src="{{asset('assets/img/partners/')}}/{{$partnerlst->imgpartner}}" alt="" width="100%"/>
-                                    </a> </span>
+                                <span>
+                                    <a href="{{$partnerlst->linkpartner}}" title="{{$partnerlst->titlepartner}}" target="_blank">
+                                        <img src="{{asset('assets/img/partners/')}}/{{$partnerlst->imgpartner}}" alt="" class="img-thumbnail" width="100%"/>
+                                    </a>
+                                </span>
                                         <!--partner-logos-->
                                     </div>
                                     <!--col-lg-3-->
